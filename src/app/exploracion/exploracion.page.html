@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Exploración de Música
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="cuerpo_page">
+  <ion-content class="cuerpo_page">
+    <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="search()" (ionCancel)="closeSearch()" (ionBlur)="closeSearch()" color="primary"></ion-searchbar>
+
+    <ion-list *ngIf="searchTerm.trim()">
+      <ion-item *ngFor="let song of songs">
+        {{ song }}
+      </ion-item>
+    </ion-list>
+    
+    <div class="recomendaciones">
+      <h2>Recomendaciones</h2>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6" *ngFor="let recommendation of recommendations" (click)="goToPlayer()">
+            <ion-card>
+              <ion-card-header [style.background-image]="'url(assets/images/' + recommendation.image + ')'">
+                <ion-card-title>{{ recommendation.title }}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <!-- Aquí puedes agregar más detalles sobre la recomendación -->
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+  </ion-content>
+</div>

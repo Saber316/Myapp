@@ -1,0 +1,35 @@
+
+ion-card{
+    background-color: transparent;
+}
+
+ion-card-title h3 {
+    color: #fbfbfb;
+    font-size: 1.5em;
+    font-weight: 300;
+
+}
+
+.logo {
+    max-width: 50%;
+    height: auto;
+
+}
+
+.ingrese {
+    --background: #4CAF50; /* Color de fondo verde */
+    --color: white;        /* Color del texto blanco */
+    --border-radius: 5px;  /* Bordes redondeados */
+    --background-activated: #45a049; /* Color cuando se presiona */
+    --background-focused: #5cb85c;  /* Color cuando está enfocado */
+    --background-hover: #5cb85c;    /* Color cuando el mouse está sobre el botón */
+  }
+
+  .NuevoUsuario{
+    --background: #030303; /* Color de fondo verde */
+    --color: white;        /* Color del texto blanco */
+    --border-radius: 5px;  /* Bordes redondeados */
+    --background-activated: #45a049; /* Color cuando se presiona */
+    --background-focused: #5cb85c;  /* Color cuando está enfocado */
+    --background-hover: #5cb85c;    /* Color cuando el mouse está sobre el botón */
+  }

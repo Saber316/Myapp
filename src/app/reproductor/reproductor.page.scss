@@ -1,0 +1,33 @@
+.song-details {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .album-cover {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    animation: rotate 5s linear infinite;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  ion-range {
+    width: 60%;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  

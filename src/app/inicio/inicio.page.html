@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Music App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="cuerpo_page">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Bienvenido a Music App</ion-card-title>
+
+        <div >Usuario: </div>
+        <div class="destacado" >    {{nombre}}</div>
+        <div class="destacado" >          {{apellido}}</div>
+        <ion-card-subtitle>Tu música favorita, al alcance de un clic</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Explora nuevas canciones, crea listas de reproducción y mucho más.</p>
+        <ion-button expand="full" routerLink="/exploracion">Explorar Música</ion-button>
+      </ion-card-content>
+    </ion-card>
+      
+   <ion-slides pager="true" [options]="slideOpts">
+  <ion-slide *ngFor="let image of images">
+    <img [src]="image" [alt]="'Imagen ' + (images.indexOf(image) + 1)">
+  </ion-slide>
+</ion-slides>
+  </div>
+</ion-content>

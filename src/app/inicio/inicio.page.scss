@@ -1,0 +1,21 @@
+
+ion-card {
+  margin: 20px;
+}
+
+ion-slides {
+  height: 100px; /* Ajusta la altura según sea necesario */
+  margin-top: 20px;
+}
+
+ion-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.destacado {
+  color: rgb(10, 116, 36);
+  font-weight: bold;
+  font-size: 18px; /* Aumenta el tamaño del texto */
+}

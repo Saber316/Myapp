@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Reproductor de Música
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="song-details">
+    <img src="assets/pop1.jpg" alt="Portada del álbum" class="album-cover">
+    <h2 class="song-title">Título de la canción</h2>
+    <h3 class="artist-name">Nombre del artista</h3>
+  </div>
+
+
+  <audio id="audioPlayer" controls>
+    <source src="assets/audio/song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="controls">
+    <ion-button (click)="playPause()">
+      <ion-icon name="{{ isPlaying ? 'pause' : 'play' }}"></ion-icon>
+    </ion-button>
+    <ion-range min="0" max="100" [(ngModel)]="volume" (ionChange)="setVolume(volume)">
+      <ion-icon size="small" slot="start" name="volume-low"></ion-icon>
+      <ion-icon size="small" slot="end" name="volume-high"></ion-icon>
+    </ion-range>
+  </div>
+</ion-content>
